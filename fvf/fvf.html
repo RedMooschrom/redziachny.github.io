@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FvF Stats Reader</title>
+    <script src="script.js"></script>
+</head>
+<body style="background-color: #2a1552; user-select: none;">
+    <p class="uploadtitle">Upload your .log file</p>
+
+    
+<div style="display: flex; flex-direction: row;">
+<button class="button-upload" onclick="document.getElementById('fileInput').click()">
+    Choose File
+</button>
+<input type="file" id="fileInput" style="display: none;">
+</div>
+
+    <label class="uploadtitle" style="font-size: 50px;" for="sortCriteria">Sort by:</label>
+    <select class="button-upload" style="width: 250px;" id="sortCriteria">
+        <option value="mostWins">Most Wins</option>
+        <option value="leastWins">Least Wins</option>
+        <option value="mostLosses">Most Losses</option>
+        <option value="leastLosses">Least Losses</option>
+        <option value="bestWinRatio">Best Win Ratio</option>
+        <option value="worstWinRatio">Worst Win Ratio</option>
+        <option value="mostTies">Most Ties</option>
+        <option value="leastTies">Least Ties</option>
+        <option value="mostMatches">Most Total Matches</option>
+        <option value="leastMatches">Least Total Matches</option>
+    </select>
+    <div id="characterContainer"></div>
+    <div id="overallTile"></div>
+    <p class="uploadtitle">Project by RedMooschrom & Sk8erSkaven (Crep)</p>
+</body>
+</html>
+
+
+<style>
+
+@font-face {
+  font-family: friendlyfont;
+  src:  url(/fvf/friendlyfont.ttf);
+}
+.character-tile {
+    background-color: #f2af1c;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.button-upload{
+    background-color: #f2af1c;
+    border: 5px solid black;
+    border-radius: 10px;
+    width: 150px;
+    height: 55px;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 35px;
+    font-family: friendlyfont;
+    color: white; /* Set the inside color to white */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Create a black outline with text-shadow */
+    cursor: pointer;
+}
+
+.uploadtitle {
+    font-size: 70px;
+    font-family: friendlyfont;
+     color: white; /* Set the inside color to white */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Create a black outline with text-shadow */
+}
+
+#character_name {
+    font-size: 35px;
+    font-family: friendlyfont;
+     color: white; /* Set the inside color to white */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Create a black outline with text-shadow */
+    margin-bottom: 8px;
+}
+
+.character-tile p {
+    margin: 5px 0;
+    font-size: 22px;
+    font-family: friendlyfont;
+}
+
+/* Example styles for overall statistics */
+.overall-tile {
+    background-color: #f2af1c;
+    border: 5px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 5px 0;
+    width: 300px;
+}
+
+#overall_stats {
+    font-family: friendlyfont;
+     color: white; /* Set the inside color to white */
+  text-shadow: 
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+    -1px  1px 0 #000,
+     1px  1px 0 #000; /* Create a black outline with text-shadow */
+    font-size: 35px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.overall-tile p {
+    font-family: friendlyfont;
+    margin: 5px 0;
+    font-size: 22px;
+    text-align: center;
+}
+
+
+</style>
