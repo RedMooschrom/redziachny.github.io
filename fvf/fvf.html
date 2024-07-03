@@ -30,8 +30,12 @@
         <option value="mostMatches">Most Total Matches</option>
         <option value="leastMatches">Least Total Matches</option>
     </select>
-    <div id="characterContainer"></div>
+
+    <div id="statscontainer" style="display: flex; flex-direction: row; justify-content: space-between;">
     <div id="overallTile"></div>
+    <div id="characterContainer"></div>
+</div>
+<div id="mapsTile"></div>
     <p class="uploadtitle">Project by RedMooschrom & Sk8erSkaven (Crep)</p>
 </body>
 </html>
@@ -52,6 +56,7 @@
     width: 200px;
     display: inline-block;
     vertical-align: top;
+    min-width: 250px;
 }
 
 .button-upload{
@@ -86,6 +91,7 @@
 
 #character_name {
     font-size: 35px;
+    text-align: left;
     font-family: friendlyfont;
      color: white; /* Set the inside color to white */
   text-shadow: 
@@ -109,10 +115,10 @@
     border-radius: 10px;
     padding: 15px;
     margin: 5px 0;
-    width: 300px;
+    min-width: 350px;
 }
 
-#overall_stats {
+.overall_stats_titles {
     font-family: friendlyfont;
      color: white; /* Set the inside color to white */
   text-shadow: 
@@ -120,15 +126,16 @@
      1px -1px 0 #000,
     -1px  1px 0 #000,
      1px  1px 0 #000; /* Create a black outline with text-shadow */
-    font-size: 35px;
+    font-size: 80px;
     margin-bottom: 10px;
     text-align: center;
 }
 
+
 .overall-tile p {
     font-family: friendlyfont;
     margin: 5px 0;
-    font-size: 22px;
+    font-size: 23px;
     text-align: center;
 }
 
