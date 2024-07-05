@@ -275,8 +275,8 @@ function formatGachasOpened(gachas) {
     });
 
     const totalGachas = totalNewGachas + totalOldGachas;
-    const percentage = ((totalGachas / 197) * 100).toFixed(2);
-    const summary = `Altogether: ${totalGachas}/197 (${percentage}%)`;
+    const percentage = ((totalGachas / 198) * 100).toFixed(2);
+    const summary = `Altogether: ${totalGachas}/198 (${percentage}%)`;
 
     gachaDescriptions.push(summary);
 
