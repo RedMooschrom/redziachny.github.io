@@ -19,7 +19,7 @@
 <input type="file" id="fileInput" style="display: none;">
 </div>
 
-    <label class="uploadtitle" style="font-size: 50px;" for="sortCriteria">Sort by:</label>
+    <label class="uploadtitle" style="font-size: 50px;" for="sortCriteria">Sort Characters by:</label>
     <select class="button-upload" style="width: 250px;" id="sortCriteria">
         <option value="mostWins">Most Wins</option>
         <option value="leastWins">Least Wins</option>
@@ -32,11 +32,22 @@
         <option value="mostMatches">Most Total Matches</option>
         <option value="leastMatches">Least Total Matches</option>
     </select>
+    
 
     <div id="statscontainer" style="display: flex; flex-direction: row; justify-content: space-between;">
     <div id="overallTile"></div>
     <div id="characterContainer"></div>
 </div>
+<label class="uploadtitle" style="font-size: 50px;" for="cardSortCriteria">Sort Cards by:</label>
+<select class="button-upload" style="width: 250px; margin-bottom: 15px;" id="cardSortCriteria">
+    <option value="mostUsed">Most Used</option>
+    <option value="leastUsed">Least Used</option>
+</select>
+
+<div id="cardsBackground" style="background-color: #f5f1c1; border-radius: 10px; border: 5px solid black; display: none; flex-direction: row; justify-content: space-between;">
+<div id="cardContainer"></div>
+</div>
+
 <div id="mapsTile"></div>
     <p class="uploadtitle">Project by RedMooschrom & Sk8erSkaven (Crep)</p>
 </body>
@@ -91,16 +102,17 @@
      1px  1px 0 #000; /* Create a black outline with text-shadow */
 }
 
-#character_name {
+#character_name, 
+#card_name {
     font-size: 35px;
     text-align: left;
     font-family: friendlyfont;
-     color: white; /* Set the inside color to white */
-  text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000; /* Create a black outline with text-shadow */
+    color: white; /* Set the inside color to white */
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000; /* Create a black outline with text-shadow */
     margin-bottom: 8px;
 }
 
